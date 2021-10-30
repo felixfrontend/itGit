@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- ========== Meta Tags ========== -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <!-- ========== Title ========== -->
+    <title>itGit</title>
+    <!-- ========== Favicon Ico ========== -->
+    <!--<link rel="icon" href="fav.ico">-->
+    <!-- ========== STYLESHEETS ========== -->
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Fonts Icon CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="assets/css/et-line.css" rel="stylesheet" />
+    <link href="assets/css/ionicons.min.css" rel="stylesheet" />
+    <!-- Carousel CSS -->
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
+    crossorigin="anonymous"/>
+    
+    <!-- Animate on Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="loader">
+      <div class="loader-outter"></div>
+      <div class="loader-inner"></div>
+    </div>
+    <!--header start here -->
+    <header class="header fixed-top ">
+      <div class="container">
+        <div class="header-top">
+        <a class="navbar-brand logo" href="#">
+          <img src="assets/img/log-light.png" alt="Evento" />
+        </a>
+
+        <div class="menu-btn">
+          <div class="menu-btn__burger">
+          </div>
+        </div>
+          <ul class="nav menu">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#courses">Курсы</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">О нас</a>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="#contacts">Контакты</a>
+            </li>
+      
+          </ul>
+        </div>
+        
+      </div>
+    </header>
+    <!--header end here-->
+
+    <!--cover section slider -->
+    <section id="home" class="home-cover">
+      <div class="cover_slider owl-carousel owl-theme">
+        <div
+          class="cover_item"
+          style="background: url('assets/img/heroimage\ 1.png')"
+        >
+          <div class="slider_content">
+            <div class="slider-content-inner">
+              <div class="container">
+                <div class="slider-content-center">
+                  <h2 class="cover-title">стань</h2>
+                  <strong class="cover-xl-text">програм- <br/> мистом</strong>
+                  <p class="cover-date">вместе с itGit!</p>
+                  <button class="btn btn-primary btn-rounded" data-modal>
+                    Записаться на курс
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="cover_item"
+          style="background: url('assets/img/heroimage\ 1.png')"
+        >
+          <div class="slider_content">
+            <div class="slider-content-inner">
+              <div class="container">
+                <div class="slider-content-left">
+                  <h2 class="cover-title">стань</h2>
+                  <strong class="cover-xl-text">програм-<br/>мистом</strong>
+                  <p class="cover-date">вместе с itGit!</p>
+                  <button class="btn btn-primary btn-rounded" data-modal>
+                    Записаться на курс
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="cover_item"
+          style="background: url('assets/img/heroimage\ 1.png')"
+        >
+          <div class="slider_content">
+            <div class="slider-content-inner">
+              <div class="container">
+                <div class="slider-content-center">
+                  <h2 class="cover-title">стань</h2>
+                  <strong class="cover-xl-text">програм-<br/>мистом</strong>
+                  <p class="cover-date">вместе с itGit!</p>
+                  <button class="btn btn-primary btn-rounded" data-modal>
+                    Записаться на курс
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cover_nav">
+        <ul class="cover_dots">
+          <li class="active" data="0"><span>1</span></li>
+          <li data="1"><span>2</span></li>
+          <li data="2" id="courses"><span>3</span></li>
+        </ul>
+      </div>
+    </section>
+    <!--cover section slider end -->
+
+    <!-- modal -->
+    <div class="modal">
+      <div class="modal__dialog">
+        <div class="modal__content">
+          <form action="#" id="form-modal">
+            <div data-close class="modal__close">&times;</div>
+            <div class="modal__title">Мы свяжемся с вами!</div>
+            <input
+              class="modal__input"
+              type="text"
+              placeholder="Ваше имя"
+              name="name"
+              required
+            />
+            <input
+              class="modal__input"
+              type="tel"
+              placeholder="Ваш номер телефона"
+              name="phone"
+              required
+            />
+            <button type="submit" class="btn btn__dark btn min">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal review">
+      <div class="modal__dialog review-dialog">
+        <div class="modal__content review-content">
+            <div review-close class="modal__close ">&times;</div>
+            <div class="review-success"><i class="far fa-check-circle"></i></div>
+            <div class="modal__title review-title">Спасибо за заявку!</div>
+            <p class="modal__text review-text">Менеджер свяжется с вами в ближайшее время
+              в течении 30 минут (обычно мгновенно)
+            </p>
+        </div>
+      </div>
+    </div>
+
+    <!--event info -->
+    <section  class="block">
+      <div class="container">
+        <div class="section_title mb50" data-aos="fade-right">
+            <h3 class="title">Ближайшие курсы</h3>
+          </div>
+        <div class="row justify-content-center" >
+          <div class="col-6 col-md-3" data-aos="fade-down">
+            <div class="icon_box_two">
+              <i class="ion-ios-calendar-outline"></i>
+              <div class="content">
+                <h5 class="box_title">ДАТА</h5>
+                <p>10-12 ноябрь 2021</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3"  data-aos="fade-up">
+            <div class="icon_box_two">
+              <i class="ion-ios-location-outline"></i>
+              <div class="content">
+                <h5 class="box_title">место</h5>
+                <p>Баялинова</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3" data-aos="fade-down">
+            <div class="icon_box_two">
+              <i class="ion-ios-person-outline"></i>
+              <div class="content">
+                <h5 class="box_title">Ментор</h5>
+                <p>Залкар</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6 col-md-3"  data-aos="fade-up">
+            <div class="icon_box_two">
+              <i class="ion-ios-pricetag-outline"></i>
+              <div class="content">
+                <h5 class="box_title">курс</h5>
+                <p>JavaScript (Back-End, Front-End)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--event info end -->
+
+    <!--event countdown -->
+    <section
+      class="bg-img block"
+      style="background-image: url('assets/img/bg/bg-img.png')"
+    >
+      <div class="overlay_dark"></div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10">
+            <h4 class="mb30 text-center color-light">
+              Осталось до конца курса
+              <span style="color: yellow"> JavaScript</span>:
+            </h4>
+            <div class="countdown">
+              <div class="countdown__time">
+                <span id="days">12</span>
+                дней
+              </div>
+
+              <div class="countdown__time">
+                <span id="hours">12</span>
+                часов
+              </div>
+
+              <div class="countdown__time">
+                <span id="minutes">12</span>
+                минут
+              </div>
+
+              <div class="countdown__time">
+                <span id="seconds">12</span>
+                секунд
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--event count down end-->
+
+    <!--about the event -->
+  
+    <!--about the event end -->
+
+    <!--courses section-->
+    <section  class="block">
+      <div class="container">
+        <div class="section_title mb50">
+          <h3 class="title">наши курсы</h3>
+        </div>
+      </div>
+      <div class="row justify-content-center no-gutters">
+        <div class="col-md-3 col-sm-6">
+          <div class="speaker_box"  data-aos="fade-up">
+            <div class="speaker_img">
+              <img src="assets/img/speakers/s1.png" alt="speaker name" />
+              <div class="info_box">
+                <h5 class="name">Python</h5>
+                <p class="position">CEO Company</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="speaker_box"  data-aos="fade-down">
+            <div class="speaker_img">
+              <img src="assets/img/speakers/s2.png" alt="speaker name" />
+              <div class="info_box">
+                <h5 class="name">JavaScript</h5>
+                <p class="position">CEO Company</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="speaker_box" data-aos="fade-up">
+            <div class="speaker_img">
+              <img src="assets/img/speakers/s3.png" alt="speaker name" />
+              <div class="info_box">
+                <h5 class="name">C# (Си-Шарп)</h5>
+                <p class="position">CEO Company</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="speaker_box" data-aos="fade-down">
+            <div class="speaker_img">
+              <img src="assets/img/speakers/s4.png" alt="speaker name" />
+              <div class="info_box">
+                <h5 class="name">Goolang</h5>
+                <p class="position">CEO Company</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="speaker_box" data-aos="fade-up">
+            <div class="speaker_img">
+              <img src="assets/img/speakers/s5.png" alt="speaker name" />
+              <div class="info_box">
+                <h5 class="name">nodeJS</h5>
+                <p class="position">CEO Company</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="speaker_box" data-aos="fade-down"> 
+            <div class="speaker_img">
+              <img src="assets/img/speakers/s6.png" alt="speaker name" />
+              <div class="info_box">
+                <h5 class="name">C++</h5>
+                <p class="position">CEO Company</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="speaker_box" data-aos="fade-up">
+            <div class="speaker_img">
+              <img src="assets/img/speakers/s7.png" alt="speaker name" />
+              <div class="info_box">
+                <h5 class="name">Vue JS</h5>
+                <p class="position">CEO Company</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="speaker_box" data-aos="fade-down">
+            <div class="speaker_img">
+              <img src="assets/img/speakers/s8.png" alt="speaker name" />
+              <div class="info_box">
+                <h5 class="name">REACT JS</h5>
+                <p class="position" id="about">CEO Company</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section  class="block">
+        <div class="container">
+          <div class="section_title" data-aos="fade-right">
+            <h3 class="title">Методика обучения</h3>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-6" data-aos="fade-up">
+              <p>
+               Мы даем тебе возможность учиться сразу на нескольких направлениях, без
+               допольнительной платы. Frontend - (HTML, CSS, JS) для Backend - (C#, Python JavaScript)
+               В общем мы тебя изучим во всех направлениях Frontend и Backend то есть ты станешь Full Stack разработчиком
+              </p>
+            </div>
+  
+            <div class="col-12 col-md-6" data-aos="fade-down">
+              <p>
+                In rhoncus massa nec sollicitudin. Ut hendrerit hendrerit nisl a
+                accumsan. Pellentesque convallis consectetur tortor id placerat.
+                Curabitur a pulvinar nunc. Maecenas laoreet finibus lectus, at
+                volutpat ligula euismod quis. Maecenas ornare, ex in malesuada
+                tempus.
+              </p>
+            </div>
+          </div>
+  
+          <!--event features-->
+          <div class="row justify-content-center mt30">
+            <div class="col-12 col-md-6 col-lg-3" data-aos="fade-down">
+              <div class="icon_box_one">
+                <i class="lnr lnr-mic"></i>
+                <div class="content">
+                  <h4>Старт с самого нуля</h4>
+                  <p>
+                   Если ты до этого никогда не изучал программирование  - тебе не будет тяжело.
+                   Ведь мы начинаем с самых азов: от установки нужных программ и базового синтаксиса,
+                   до реальных проектов с нуля.
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up">
+              <div class="icon_box_one">
+                <i class="lnr lnr-rocket"></i>
+                <div class="content">
+                  <h4>Упор на практику</h4>
+                  <p>
+                    Более 60% обучения - работа над проетами. Ты будешь кодить не только дома, но и прямо на уроках 
+                    К концу курса это позволить сформулировать настоящее портфолио работ.
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-12 col-md-6 col-lg-3" data-aos="fade-down">
+              <div class="icon_box_one">
+                <i class="lnr lnr-bullhorn"></i>
+                <div class="content">
+                  <h4>Внимание каждому студенту</h4>
+                  <p>
+                    Мы формируем небольшие группы - по 10 человек.
+                    Такую группу курирует 1 ментор и 2 ассистента.
+                    Это позволяет уделить персональные внимание каждому.
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up">
+              <div class="icon_box_one">
+                <i class="lnr lnr-clock"></i>
+                <div class="content">
+                  <h4>Доступ 24/7</h4>
+                  <p>
+                   Все учебные материалы и записи уроков, доступны тебе  круглосуточно. 
+                   Учись в темпе, который подходит лично тебе
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--event features end-->
+        </div>
+      </section>
+    <!--speaker section end -->
+
+    <!--Price section-->
+    <!-- <section class="pb100">
+      <div class="container">
+        <div class="section_title mb50">
+          <h3 class="title">Pricing table</h3>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-4 col-12">
+            <div class="price_box active">
+              <div class="price_highlight">recommended</div>
+              <div class="price_header">
+                <h4>Early Bird</h4>
+                <h6>For the fast ones</h6>
+              </div>
+              <div class="price_tag">65 <sup>$</sup></div>
+              <div class="price_features">
+                <ul>
+                  <li>Early Entrance</li>
+                  <li>Front seat</li>
+                  <li>Complementary Drinks</li>
+                  <li>Promo Gift</li>
+                </ul>
+              </div>
+              <div class="price_footer">
+                <a href="#" class="btn btn-primary btn-rounded">Purchase</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-12">
+            <div class="price_box">
+              <div class="price_header">
+                <h4>Start up</h4>
+                <h6>For the begginers</h6>
+              </div>
+              <div class="price_tag">85 <sup>$</sup></div>
+              <div class="price_features">
+                <ul>
+                  <li>Early Entrance</li>
+                  <li>Front seat</li>
+                  <li>Complementary Drinks</li>
+                  <li>Promo Gift</li>
+                </ul>
+              </div>
+              <div class="price_footer">
+                <a href="#" class="btn btn-primary btn-rounded">Purchase</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-12">
+            <div class="price_box">
+              <div class="price_header">
+                <h4>Corporate</h4>
+                <h6>For the business</h6>
+              </div>
+              <div class="price_tag">95 <sup>$</sup></div>
+              <div class="price_features">
+                <ul>
+                  <li>Early Entrance</li>
+                  <li>Front seat</li>
+                  <li>Complementary Drinks</li>
+                  <li>Promo Gift</li>
+                </ul>
+              </div>
+              <div class="price_footer">
+                <a href="#" class="btn btn-primary btn-rounded">Purchase</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!--price section end -->
+
+    <!--event calender-->
+
+    <section>
+
+    </section>
+    
+    <section class="block">
+      <div class="container">
+        <div class="table-responsive">
+          <table class="event_calender table">
+            <thead class="event_title">
+              <tr>
+                <th>
+                  <i class="ion-ios-calendar-outline"></i>
+                  <span>Календарь курсов</span>
+                </th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="courses__item">
+                    <div class="courses__img" data-aos="fade-right">
+                      <img src="assets/img/cleander/js 1.png" alt="event" />
+                    </div>
+                  </div>
+                </td>
+                <td class="event_date">
+                  14
+                  <span>Декабрь</span>
+                </td>
+                <td>
+                  <div class="event_place">
+                    <h5>Front-end</h5>
+                    <h6>09:00 - 11:00</h6>
+                  </div>
+                </td>
+                <td>
+                  <button class="btn btn-primary btn-rounded" data-modal>Записаться</button>
+                </td>
+             
+              </tr>
+              <tr>
+                <td>
+                  <div class="courses__item" >
+                  <img src="assets/img/cleander/python.jpg" data-aos="fade-right" alt="event" />
+                  </div>
+                  </div>
+                </td>
+                <td class="event_date">
+                  10
+                  <span>Декабрь</span>
+                </td>
+                <td>
+                  <div class="event_place">
+                    <h5>Data Science</h5>
+                    <h6>09:00 - 11:00</h6>
+                  </div>
+                </td>
+                <td>
+                  <button class="btn btn-primary btn-rounded" data-modal>Записаться</button>
+                </td>
+           
+              </tr>
+              <tr>
+                <td>
+                  <div class="courses__item">
+                  <div class="courses__img" data-aos="fade-left">
+                  <img src="assets/img/cleander/csharp.png" alt="event" />
+                  </div>
+                  </
+                </td>
+                <td class="event_date">
+                  22
+                  <span>Декабрь</span>
+                </td>
+                <td>
+                  <div class="event_place">
+                    <h5>Front-end</h5>
+                    <h6>09:00 - 11:00</h6>
+                  </div>
+                </td>
+                <td>
+                  <button class="btn btn-primary btn-rounded" data-modal>Записаться</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <!--event calender end -->
+
+    <!--brands section -->
+    <section class="bg-gray block">
+      <div class="container">
+        <div class="section_title mb50">
+          <h3 class="title">Отзывы студентов</h3>
+        </div>
+        <div class="brand_carousel owl-carousel">
+          <div class="brand_item text-center">
+            <div class="review_column">
+              <div class="review_top">
+                <div class="review_top-item">
+                  <div class="review_top-avatar">
+                    <img src="./assets/img/bg/dd.jpg" alt="" />
+                  </div>
+                  <div class="review_top-status">
+              Felix Duishebekov <br />
+                    <span>Junior front-end</span>
+                  </div>
+                </div>
+                <div class="review_top-rating">
+                  <div class="review_top-rating-star">
+                    <img src="./assets/img/stars.svg" alt="" />
+                  </div>
+                  <div class="review_top-rating-ball">4.5</div>
+                </div>
+              </div>
+              <div class="review_body">
+                <div class="review_text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Ullam, repellat quia ipsa voluptatum iusto dolor natus ea ex!
+                  Voluptas exercitationem commodi, cumque id quod esse atque in
+                  labore, dolor maxime autem fuga totam aspernatur. Tempore,
+                  tempora fugit. Odio, consectetur repudiandae?
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="brand_item text-center">
+            <div class="review_column">
+                <div class="review_top">
+                  <div class="review_top-item">
+                    <div class="review_top-avatar">
+                      <img src="./assets/img/bg/dd.jpg" alt="" />
+                    </div>
+                    <div class="review_top-status">
+                Felix Duishebekov <br />
+                      <span>Junior front-end</span>
+                    </div>
+                  </div>
+                  <div class="review_top-rating">
+                    <div class="review_top-rating-star">
+                      <img src="./assets/img/stars.svg" alt="" />
+                    </div>
+                    <div class="review_top-rating-ball">4.5</div>
+                  </div>
+                </div>
+                <div class="review_body">
+                  <div class="review_text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Ullam, repellat quia ipsa voluptatum iusto dolor natus ea ex!
+                    Voluptas exercitationem commodi, cumque id quod esse atque in
+                    labore, dolor maxime autem fuga totam aspernatur. Tempore,
+                    tempora fugit. Odio, consectetur repudiandae?
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <div class="brand_item text-center">
+            <div class="review_column">
+                <div class="review_top">
+                  <div class="review_top-item">
+                    <div class="review_top-avatar">
+                      <img src="./assets/img/bg/dd.jpg" alt="" />
+                    </div>
+                    <div class="review_top-status">
+                Felix Duishebekov <br />
+                      <span>Junior front-end</span>
+                    </div>
+                  </div>
+                  <div class="review_top-rating">
+                    <div class="review_top-rating-star">
+                      <img src="./assets/img/stars.svg" alt="" />
+                    </div>
+                    <div class="review_top-rating-ball">4.5</div>
+                  </div>
+                </div>
+                <div class="review_body">
+                  <div class="review_text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Ullam, repellat quia ipsa voluptatum iusto dolor natus ea ex!
+                    Voluptas exercitationem commodi, cumque id quod esse atque in
+                    labore, dolor maxime autem fuga totam aspernatur. Tempore,
+                    tempora fugit. Odio, consectetur repudiandae?
+                  </div>
+                </div>
+              </div>
+        </div>
+
+        <div class="brand_item text-center">
+            <div class="review_column">
+                <div class="review_top">
+                  <div class="review_top-item">
+                    <div class="review_top-avatar">
+                      <img src="./assets/img/bg/dd.jpg" alt="" />
+                    </div>
+                    <div class="review_top-status">
+                Felix Duishebekov <br />
+                      <span>Junior front-end</span>
+                    </div>
+                  </div>
+                  <div class="review_top-rating">
+                    <div class="review_top-rating-star">
+                      <img src="./assets/img/stars.svg" alt="" />
+                    </div>
+                    <div class="review_top-rating-ball">4.5</div>
+                  </div>
+                </div>
+                <div class="review_body">
+                  <div class="review_text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Ullam, repellat quia ipsa voluptatum iusto dolor natus ea ex!
+                    Voluptas exercitationem commodi, cumque id quod esse atque in
+                    labore, dolor maxime autem fuga totam aspernatur. Tempore,
+                    tempora fugit. Odio, consectetur repudiandae?
+                  </div>
+                </div>
+              </div>
+        </div>
+
+        <div class="brand_item text-center">
+            <div class="review_column">
+                <div class="review_top">
+                  <div class="review_top-item">
+                    <div class="review_top-avatar">
+                      <img src="./assets/img/bg/dd.jpg" alt="" />
+                    </div>
+                    <div class="review_top-status">
+                Felix Duishebekov <br />
+                      <span>Junior front-end</span>
+                    </div>
+                  </div>
+                  <div class="review_top-rating">
+                    <div class="review_top-rating-star">
+                      <img src="./assets/img/stars.svg" alt="" />
+                    </div>
+                    <div class="review_top-rating-ball">4.5</div>
+                  </div>
+                </div>
+                <div class="review_body">
+                  <div class="review_text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Ullam, repellat quia ipsa voluptatum iusto dolor natus ea ex!
+                    Voluptas exercitationem commodi, cumque id quod esse atque in
+                    labore, dolor maxime autem fuga totam aspernatur. Tempore,
+                    tempora fugit. Odio, consectetur repudiandae?
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </section>
+
+    <!--brands section end-->
+    
+    <section class="block">
+      <div class="container">
+        <div class="section_title" data-aos="fade-right">
+          <h3 class="title">Наш офис</h3></div>
+          <div class="office" >
+            <div class="office__address" data-aos="fade-right"> 
+            <p class="office__timetable"><span> График работы:</span> Пн-Сб 9:00-18:00 </p>
+             <p class="office__location"><span> Местоположения:</span> г.Ош Баялинова 1 "Ош Нуру"
+            </p>
+            <p class="office__number"><span>Телефон:</span> 0508-12-00-12 <br>
+              0558-12-00-12
+             </p>
+            </div>
+            <div class="yandex_map">
+              <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A19a09119ebffd184a0ac03b517e4caec73abbdc2db2bc078ac6a7fd827ddea66&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+            </div>
+          </div>
+      </div>
+    </section>
+    
+
+    <!--get tickets section -->
+    <!-- <section
+      class="bg-img block"
+      style="background-image: url('assets/img/bg/tickets.png')"
+      id="contact"
+    >
+      <div class="container">
+        <div class="section_title mb30">
+          <h3 class="title color-light">отзывы</h3>
+        </div>
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-9 text-md-left text-center color-light">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus
+            massa nec gravida tempus. Integer iaculis in aazzzCurabitur a
+            pulvinar nunc. Maecenas laoreet finibus lectus, at volutpat ligula
+            euismod.
+          </div>
+          <div class="col-md-3 text-md-right text-center">
+            <a href="#" class="btn btn-primary btn-rounded mt30">buy now</a>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!--get tickets section end-->
+
+    <!--footer start -->
+    <footer id="contacts">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-4 col-12">
+            <div class="footer_box">
+              <div class="footer_header">
+                <div class="footer_logo" >
+                  <img src="assets/img/logo-itgit.png" alt="evento" />
+                </div>
+              </div>
+              <div class="footer_box_body">
+                <p>
+                 Не нужно ждать чтобы разработать свой продукт, начните реализовать свой продукт уже сейчас.
+                 
+                </p>
+                <ul class="footer_social">
+                  <li>
+                    <a href="https://t.me/ITGitBot" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="ion-social-whatsapp"></i></a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/itgit.kg/" target="_blank"><i class="ion-social-instagram"></i></a>
+                  </li>
+                
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="footer_box">
+              <div class="footer_header">
+                <h4 class="footer_title">instagram</h4>
+              </div>
+              <div class="footer_box_body">
+                <ul class="instagram_list">
+                  <li>
+                    <a href="#">
+                      <img src="assets/img/image 26.jpg" alt="instagram" />
+                    </a>
+                  </li>
+                  <li>
+                  
+                    <a href="#">
+                      <img src="assets/img/image 16.jpg" alt="instagram" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="assets/img/js.jfif" alt="instagram" />
+                    </a>
+                  </li>
+                
+                  <li>
+                    <a href="#">
+                      <img src="assets/img/image 37.jpg" alt="instagram" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="assets/img/image 32.jpg" alt="instagram" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <img src="assets/img/image 2.jpg" alt="instagram" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4">
+            <div class="footer_box">
+              <div class="footer_header">
+                <h4 class="footer_title">Если есть вопросы можете задавать</h4>
+              </div>
+              <form class="footer_box_body" id="form">
+                <div class="newsletter_form">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    placeholder="Ваш номер телефона"
+                    name="phone"
+                    maxlength="14"
+                    minlength="10"
+                  />
+                       <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Сообщение"
+                    name="quastion"
+                    required
+                  />
+                  <input type="submit"
+                  class="btn btn-rounded btn-block btn-primary"  
+                  required
+                 / >
+               
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="copyright_footer">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-12">
+            <p>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              Copyright &copy;
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              All rights reserved | This template is made with
+              <a href="#" target="_blank">Felix</a>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--footer end -->
+
+    <!-- jquery -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <!--slick carousel -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!--parallax -->
+    <script src="assets/js/parallax.min.js"></script>
+    <!--Counter up -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!--Counter down -->
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <!-- WOW JS -->
+    <script src="assets/js/wow.min.js"></script>
+    <!-- Animate on Scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom js -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
