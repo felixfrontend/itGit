@@ -1821,7 +1821,7 @@ header li ul.sub_menu li a:hover {
 
 @media (max-width: 767px) {
   .menu-btn {
-    position: re    lative;
+    position: relative;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2526,7 +2526,7 @@ Cover
 }
 
 .cover_slider .slider-content-center {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   text-align: center;
 }
@@ -2568,9 +2568,8 @@ Cover
   margin-top: 25px;
   margin-bottom: 0;
   opacity: 0;
-  font-weight: 500;
+  font-weight: bold;
   color: #ffffff;
-  text-transform: uppercase;
   -webkit-transform: translateY(20px);
   -ms-transform: translateY(20px);
       transform: translateY(20px);
@@ -2582,7 +2581,7 @@ Cover
 .cover_slider .cover_item .slider_content .slider-content-inner .cover-xl-text {
   opacity: 0;
   text-transform: uppercase;
-  font-size: 120px;
+  font-size: 90px;
   font-weight: 900;
   line-height: 1.1;
   color: #0F70B7;
@@ -2599,7 +2598,6 @@ Cover
   margin: 20px 0;
   color: #ffffff;
   margin-bottom: 25px;
-  text-transform: uppercase;
   opacity: 0;
   -webkit-transform: translateY(20px);
   -ms-transform: translateY(20px);
@@ -2607,6 +2605,7 @@ Cover
   -webkit-transition: all 0.4s 900ms ease-in-out;
   -o-transition: all 0.4s 900ms ease-in-out;
   transition: all 0.4s 900ms ease-in-out;
+  font-weight: 600;
 }
 
 .cover_slider .cover_item .slider_content .slider-content-inner a {
@@ -2614,12 +2613,12 @@ Cover
   -webkit-transform: translateY(20px);
   -ms-transform: translateY(20px);
       transform: translateY(20px);
-  -webkit-transition: transform  0.4s 1200ms ease-in-out, opacity 0.4s 1200ms ease-in-out;
-  -webkit-transition: opacity 0.4s 1200ms ease-in-out, -webkit-transform  0.4s 1200ms ease-in-out;
-  transition: opacity 0.4s 1200ms ease-in-out, -webkit-transform  0.4s 1200ms ease-in-out;
-  -o-transition: transform  0.4s 1200ms ease-in-out, opacity 0.4s 1200ms ease-in-out;
-  transition: transform  0.4s 1200ms ease-in-out, opacity 0.4s 1200ms ease-in-out;
-  transition: transform  0.4s 1200ms ease-in-out, opacity 0.4s 1200ms ease-in-out, -webkit-transform  0.4s 1200ms ease-in-out;
+  -webkit-transition: transform 0.4s 1200ms ease-in-out, opacity 0.4s 1200ms ease-in-out;
+  -webkit-transition: opacity 0.4s 1200ms ease-in-out, -webkit-transform 0.4s 1200ms ease-in-out;
+  transition: opacity 0.4s 1200ms ease-in-out, -webkit-transform 0.4s 1200ms ease-in-out;
+  -o-transition: transform 0.4s 1200ms ease-in-out, opacity 0.4s 1200ms ease-in-out;
+  transition: transform 0.4s 1200ms ease-in-out, opacity 0.4s 1200ms ease-in-out;
+  transition: transform 0.4s 1200ms ease-in-out, opacity 0.4s 1200ms ease-in-out, -webkit-transform 0.4s 1200ms ease-in-out;
 }
 
 .cover_slider .active .slider_content .slider-content-inner * .cover-title {
@@ -2657,10 +2656,10 @@ Cover
   -webkit-transform: translateY(0px);
   -ms-transform: translateY(0px);
       transform: translateY(0px);
-  -webkit-transition: all 0.4s 1200ms ease-in-out, opacity 0.4s 1200ms ease-in-out, color 0.4s ease-in-out, border 0.4s  ease-in-out, background-color 0.4s  ease-in-out;
-  -webkit-transition: all 0.4s 1200ms ease-in-out, opacity 0.4s 1200ms ease-in-out, color 0.4s  ease-in-out, border 0.4s  ease-in-out, background-color 0.4s  ease-in-out;
-  -o-transition: all 0.4s 1200ms ease-in-out, opacity 0.4s 1200ms ease-in-out, color 0.4s  ease-in-out, border 0.4s  ease-in-out, background-color 0.4s  ease-in-out;
-  transition: all 0.4s 1200ms ease-in-out, opacity 0.4s 1200ms ease-in-out, color 0.4s  ease-in-out, border 0.4s  ease-in-out, background-color 0.4s  ease-in-out;
+  -webkit-transition: all 0.4s 1200ms ease-in-out, opacity 0.4s 1200ms ease-in-out, color 0.4s ease-in-out, border 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  -webkit-transition: all 0.4s 1200ms ease-in-out, opacity 0.4s 1200ms ease-in-out, color 0.4s ease-in-out, border 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  -o-transition: all 0.4s 1200ms ease-in-out, opacity 0.4s 1200ms ease-in-out, color 0.4s ease-in-out, border 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  transition: all 0.4s 1200ms ease-in-out, opacity 0.4s 1200ms ease-in-out, color 0.4s ease-in-out, border 0.4s ease-in-out, background-color 0.4s ease-in-out;
 }
 
 .cover_slider .owl-dots {
@@ -2905,11 +2904,11 @@ Cover
     font-size: 30px;
   }
   .cover_slider .cover_item .slider_content .slider-content-inner .cover-xl-text {
-    font-size: 50px;
+    font-size: 30px;
   }
   .cover_slider .cover_item .slider_content .slider-content-inner .cover-date {
-    margin: 15px 0;
     font-size: 24px;
+    margin: 5px 0 10px;
   }
   .breadcrumbs ul {
     padding: 5px 30px;
@@ -3285,6 +3284,16 @@ Cover
           align-items: center;
 }
 
+@media (min-width: 767px) {
+  .review_top {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .review_top-item {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3299,6 +3308,24 @@ Cover
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (min-width: 767px) {
+  .review_top-item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .review_top-avatar {
@@ -3321,11 +3348,24 @@ Cover
      object-position: 50% 50%;
 }
 
+@media (min-width: 767px) {
+  .review_top-avatar {
+    width: 70px;
+    height: 70px;
+  }
+}
+
 .review_top-status {
   margin: 3px 0;
   font-size: 15px;
   font-weight: 500;
   color: #0F70B7;
+}
+
+@media (min-width: 767px) {
+  .review_top-status {
+    padding: 0 20px;
+  }
 }
 
 .review_top-status span {

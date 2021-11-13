@@ -1,21 +1,3 @@
-/*
- * Evento -  Event html  Template
- * Build Date: jan 2018
- * Author: colorlib
- * Copyright (C) 2018 colorlib
- */
-/* ------------------------------------- */
-/*  TABLE OF CONTENTS
- /* ------------------------------------- */
-/*   PRE LOADING                          */
-/*   WOW                                 */
-/*   sliders                      */
-/*    MAPS                               */
-/*   COUNTER JS              */
-
-/* ==============================================
-/*  PRE LOADING
-  =============================================== */
 "use strict";
 window.addEventListener("DOMContentLoaded", () => {
   $(window).load(function () {
@@ -24,9 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   $(document).ready(function () {
     "use strict";
-    /* ==============================================
-        /*   wow
-        =============================================== */
+
     var wow = new WOW({
       animateClass: "animated",
       offset: 10,
@@ -71,7 +51,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     $(".brand_carousel").owlCarousel({
       loop: true,
-      autoplay: true,
+      autoplay: false,
       smartSpeed: 450,
       autoplayHoverPause: false,
       dots: false,
@@ -83,10 +63,10 @@ window.addEventListener("DOMContentLoaded", () => {
         },
 
         800: {
-          items: 3,
+          items: 1,
         },
         1600: {
-          items: 4,
+          items: 1,
         },
       },
       items: 5,
@@ -116,20 +96,14 @@ window.addEventListener("DOMContentLoaded", () => {
       var longtuided = map.attr("data-lon");
     }
     function init() {
-      // Basic options for a simple Google Map
-      // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
       var mapOptions = {
-        // How zoomed in you want the map to start at (always required)
         zoom: 16,
         scrollwheel: false,
         navigationControl: false,
         mapTypeControl: false,
         scaleControl: false,
-        // The latitude and longitude to center the map (always required)
         center: new google.maps.LatLng(lattuide, longtuided), // New York
 
-        // How you would like to style the map.
-        // This is where you would paste any style found on Snazzy Maps.
         styles: [
           {
             featureType: "water",
@@ -207,58 +181,54 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
-  //Tabs
 
-  const deadline = "2021-11-10";
-  function getTimeRemaining(endtime) {
-    const t = Date.parse(endtime) - Date.parse(new Date()),
-      days = Math.floor(t / (1000 * 60 * 60 * 24)),
-      hours = Math.floor((t / (1000 * 60 * 60)) % 24),
-      minutes = Math.floor((t / 1000 / 60) % 60),
-      seconds = Math.floor((t / 1000) % 60);
+  //Deadline
 
-    return {
-      total: t,
-      days: days,
-      hours: hours,
-      minutes: minutes,
-      seconds: seconds,
-    };
-  }
-
-  function getZero(num) {
-    if (num >= 0 && num < 10) {
-      return `0 ${num}`;
-    } else {
-      return num;
-    }
-  }
-
-  function setClock(selector, endtime) {
-    const timer = document.querySelector(selector),
+  const fetchDeadline = () => {
+    const timer = document.querySelector(".countdown"),
       days = timer.querySelector("#days"),
       hours = timer.querySelector("#hours"),
       minutes = timer.querySelector("#minutes"),
-      seconds = timer.querySelector("#seconds"),
-      timeInterval = setInterval(updateClock, 1000);
-    updateClock();
-    function updateClock() {
-      const t = getTimeRemaining(endtime);
-      days.innerHTML = getZero(t.days);
-      hours.innerHTML = getZero(t.hours);
-      minutes.innerHTML = getZero(t.minutes);
-      seconds.innerHTML = getZero(t.seconds);
-      if (t.total <= 0) {
-        clearInterval(timeInterval);
-      }
-    }
+      seconds = timer.querySelector("#seconds");
+    fetch("http://192.168.10.247:8000/api/v1/course/main/event")
+      .then((res) => res.json())
+      .then((data) => {
+        deadlineCourse(data.text);
+        setInterval(updateDeadline, 1000);
+        updateDeadline();
+        function updateDeadline() {
+          const t = Date.parse(data.date) - Date.parse(new Date()),
+            daysData = Math.floor(t / (1000 * 60 * 60 * 24)),
+            hoursData = Math.floor((t / (1000 * 60 * 60)) % 24),
+            minutesData = Math.floor((t / 1000 / 60) % 60),
+            secondsData = Math.floor((t / 1000) % 60);
+          days.innerHTML = daysData;
+          hours.innerHTML = hoursData;
+          minutes.innerHTML = minutesData;
+          seconds.innerHTML = secondsData;
+          if (t <= 0) {
+            clearInterval(timeInterval);
+          }
+        }
+      });
+  };
+
+  function deadlineCourse(text) {
+    const deadlineText = document.querySelector("#deadlineText");
+    deadlineText.innerHTML = text;
   }
 
-  setClock(".countdown", deadline);
+  function courseText(text) {
+    const deadlineText = document.querySelector("#deadlineText");
+    deadlineText.innerHTML = text;
+  }
+
+  deadlineCourse();
+  fetchDeadline();
 
   // modal
 
-  const modalTrigger = document.querySelectorAll("[data-modal]"),
+  const modalTrigger = document.querySelectorAll("#data-modal"),
     modal = document.querySelector(".modal"),
     modalCloseBtn = document.querySelector("[data-close]");
 
@@ -268,8 +238,6 @@ window.addEventListener("DOMContentLoaded", () => {
       document.body.style.overflow = "hidden";
     });
   });
-
-
 
   function closeModal() {
     modal.classList.toggle("show");
@@ -285,26 +253,26 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   const review = document.querySelector(".review"),
-        reviewClose = document.querySelector("[review-close]");
+    reviewClose = document.querySelector("[review-close]");
 
-        const showReview = () => {
-          review.style.display = "block";
-          document.body.style.overflow = "hidden";
-          const reviewTitle = document.querySelector('.review-title').innerHTML = "Спасибо за вопрос!"
-        };
-        
-        reviewClose.addEventListener('click', () => {
-          review.style.display = "none"
-          document.body.style.overflow = ''
-        })
- 
-        review.addEventListener('click', (e) => {
-          if(e.target === review) {
-            review.style.display = "none"
-            document.body.style.overflow = ''
-          }
-        })
+  const showReview = () => {
+    review.style.display = "block";
+    document.body.style.overflow = "hidden";
+    const reviewTitle = (document.querySelector(".review-title").innerHTML =
+      "Спасибо за вопрос!");
+  };
 
+  reviewClose.addEventListener("click", () => {
+    review.style.display = "none";
+    document.body.style.overflow = "";
+  });
+
+  review.addEventListener("click", (e) => {
+    if (e.target === review) {
+      review.style.display = "none";
+      document.body.style.overflow = "";
+    }
+  });
 
   const menuBtn = document.querySelector(".menu-btn"),
     navMenu = document.querySelector(".nav"),
@@ -356,7 +324,6 @@ window.addEventListener("DOMContentLoaded", () => {
     const data = {
       typeForm: "Заявка",
     };
-
     formModal.addEventListener("submit", (e) => {
       e.preventDefault();
       const formModalData = new FormData(formModal);
@@ -396,6 +363,66 @@ window.addEventListener("DOMContentLoaded", () => {
 
   sendFormData();
 
+  // table fetchsa
+  const courseBody = document.querySelector("#courseBody");
+
+  function tableFetch() {
+    fetch("http://192.168.10.247:8000/api/v1/course/courses-lists")
+      .then((res) => {
+        if (!res.ok) {
+          throw Error("ERROR");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        const courseData = data
+          .map((item) => {
+            let courseImg 
+            if(item.course_image === 'javascript')
+            courseImg ='./assets/img/cleander/js1.png' 
+            else if(item.course_image === 'python')
+            courseImg ="./assets/img/cleander/python.png"
+            else if(item.course_image === 'c#')
+            courseImg = "./assets/img/cleander/csharp.png" 
+            else
+            courseImg=null
+
+            let startCourseData =  item.start_date
+            let startCourseDate= startCourseData.replace('09:00:00', '')
+            return `
+           <tr>
+          <td>
+            <div class="courses__item">
+              <div class="courses__img" >
+                <img src=${courseImg} />
+              </div>
+            </div>
+          </td>
+          <td class="event_date">
+            ${startCourseDate}
+            <span></span>
+          </td>
+          <td>
+            <div class="event_place">
+              <h5 id='course-item'>${item.name}</h5>
+              <h5>${item.grafik_course}</h5>
+            </div>
+          </td>
+          <td>
+            <button class="btn btn-primary btn-rounded" data-modal>Записаться</button>
+          </td>
+        </tr>
+          `;
+          })
+          .join("");
+        courseBody.insertAdjacentHTML("afterbegin", courseData);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+  tableFetch();
+
   // success form
 
   AOS.init({
@@ -418,15 +445,4 @@ window.addEventListener("DOMContentLoaded", () => {
     mirror: false, // whether elements should animate out while scrolling past them
     anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
   });
-
-  //   const timer = () => {
-  //     setTimeout(() => {
-  //        modal.classList.toggle('show')
-  //        document.body.style.overflow = 'hidden'
-  //      },10000)
-
-  //   }
-
-  // timer()
 });
-

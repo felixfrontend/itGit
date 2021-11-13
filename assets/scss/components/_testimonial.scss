@@ -1,23 +1,23 @@
-.testimonial_carousel{
+.testimonial_carousel {
   border: solid 2px $color-primary;
   padding: 25px;
   position: relative;
   margin: 15px 0;
 
-  p{
+  p {
     font-style: italic;
   }
-  .testimonial_author{
+  .testimonial_author {
     display: inline-block;
     position: relative;
     padding: 15px 60px;
-    img{
+    img {
       position: absolute;
       left: 0;
       width: 50px;
       height: 50px;
     }
-    h5{
+    h5 {
       font-size: 14px;
       text-transform: capitalize;
       margin: 0;
@@ -26,20 +26,20 @@
       color: $color-dark;
       padding-top: 10px;
     }
-    p{
+    p {
       margin: 0;
       padding: 0;
       font-size: 12px;
       font-style: normal;
       font-weight: 400;
       text-transform: capitalize;
-      span{
+      span {
         color: $color-primary;
       }
     }
   }
 
-  &:before{
+  &:before {
     content: "\f347";
     font-family: "Ionicons";
     position: absolute;
@@ -51,10 +51,9 @@
     left: 15px;
     line-height: 0.8;
   }
-
 }
 
-.testimonial_carousel{
+.testimonial_carousel {
   .slick-dots {
     position: absolute;
     bottom: 50px;
@@ -66,7 +65,7 @@
     margin: 0;
     list-style: none;
     text-align: right;
-    li{
+    li {
       position: relative;
       display: inline-block;
       width: 11px;
@@ -74,7 +73,7 @@
       margin: 0 1px;
       padding: 0;
       cursor: pointer;
-      button{
+      button {
         position: relative;
         display: inline-block;
         width: 6px;
@@ -85,14 +84,14 @@
         opacity: 0.5;
         padding: 0;
         cursor: pointer;
-        &:before{
+        &:before {
           content: "";
           opacity: 0;
         }
       }
     }
-    li.slick-active{
-      button{
+    li.slick-active {
+      button {
         opacity: 1;
       }
     }
