@@ -231,6 +231,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const modalTrigger = document.querySelectorAll("#data-modal"),
     modal = document.querySelector(".modal"),
     modalCloseBtn = document.querySelector("[data-close]");
+  
 
   modalTrigger.forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -238,6 +239,7 @@ window.addEventListener("DOMContentLoaded", () => {
       document.body.style.overflow = "hidden";
     });
   });
+
 
   function closeModal() {
     modal.classList.toggle("show");
@@ -377,18 +379,35 @@ window.addEventListener("DOMContentLoaded", () => {
       .then((data) => {
         const courseData = data
           .map((item) => {
-            let courseImg 
-            if(item.course_image === 'javascript')
-            courseImg ='./assets/img/cleander/js1.png' 
-            else if(item.course_image === 'python')
-            courseImg ="./assets/img/cleander/python.png"
-            else if(item.course_image === 'c#')
-            courseImg = "./assets/img/cleander/csharp.png" 
-            else
-            courseImg=null
+            let courseImg;
+            if (item.course_image === "javascript")
+              courseImg = "./assets/img/cleander/js1.png";
+            else if (item.course_image === "python")
+              courseImg = "./assets/img/cleander/python.png";
+            else if (item.course_image === "c#")
+              courseImg = "./assets/img/cleander/csharp.png";
+            else courseImg = null;
 
-            let startCourseData =  item.start_date
-            let startCourseDate= startCourseData.replace('09:00:00', '')
+            const monthDate = [
+              "Январь",
+              "Февраль",
+              "Март",
+              "Апрель",
+              "Май",
+              "Июнь",
+              "Июль",
+              "Август",
+              "Сентябрь",
+              "Октябрь",
+              "Ноябрь",
+              "Декабрь",
+            ];
+
+            let startCourseData = item.start_date;
+            let startCourseDate = new Date(Date.parse(startCourseData));
+            let day = startCourseDate.getDate();
+            let month = monthDate[startCourseDate.getMonth()];
+
             return `
            <tr>
           <td>
@@ -399,17 +418,17 @@ window.addEventListener("DOMContentLoaded", () => {
             </div>
           </td>
           <td class="event_date">
-            ${startCourseDate}
-            <span></span>
+          ${day}
+            <span>${month}</span>
           </td>
-          <td>
+          <td class="event-table">
             <div class="event_place">
               <h5 id='course-item'>${item.name}</h5>
               <h5>${item.grafik_course}</h5>
             </div>
           </td>
           <td>
-            <button class="btn btn-primary btn-rounded" data-modal>Записаться</button>
+            <button class="btn btn-primary btn-rounded" id="table-modal">Записаться</button>
           </td>
         </tr>
           `;
@@ -421,6 +440,17 @@ window.addEventListener("DOMContentLoaded", () => {
         console.log(error);
       });
   }
+  const tableModal = document.querySelectorAll('#table-modal')
+
+  document.addEventListener('click',function(e){
+    if(e.target && e.target.id == 'table-modal'){
+      modal.classList.toggle("show");
+      document.body.style.overflow = "hidden";
+     }
+ });
+
+ 
+  
   tableFetch();
 
   // success form
